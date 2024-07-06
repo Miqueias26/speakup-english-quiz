@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/usa.png" type="image/x-icon">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <!--AQUI ESTA O HEADER COM O LOGO FIXADO NO TOPO-->
+    <header>
+        <nav>
+
+            <ul>
+                <li>ChatBot <img src="imagens/icononline.png" alt="" width="12px"></li>
+
+                <li><a href="index.html" class="close">&times;</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="ocultarchat" onclick="limpartela()">
+
+        <div class="caixadetexto1">
+            <img src="imagens/imagem2.png" alt="" width="70px" height="">
+            <div class="container">
+                <p class="botmensagem1">Oie, sou Suzana aqui da SpeakUp! Para iniciarmos o teste digite o seu nome:
+                </p>
+            </div>
+
+
+        </div>
+        <div class="areadeenvio">
+            <span>
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome: ">
+                <input id="enviarnome" type="button" value="Submeter">
+                <p id="nomenulo"></p>
+            </span>
+        </div>
+
+        <div class="nomedocliente">
+            <p id="emtela"></p>
+        </div>
+
+
+        <div class="botmensagem2">
+            <p id="mensagem2"></p>
+            <div class="oi">
+                <p id="resposta"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="iniciarquiz" onclick="iniciarperguntas()"></div>
+    <div id="cancelarquiz" onclick="iniciarperguntas()"></div>
+
+
+    <div id="perguntasquiz" class="hidden">
+        <h1>QUESTÕES</h1>
+        <form id="formulario" onsubmit="calcularPontuacao(); return false;">
+            <!-- Perguntas do Quiz -->
+            <fieldset>
+                <legend>1</legend>
+                <p>Qual é o passado de "go"?</p>
+                <input type="radio" id="goed" name="pergunta1" value="goed" required>
+                <label for="goed">goed</label>
+                <br>
+                <input type="radio" id="went" name="pergunta1" value="went">
+                <label for="went">went</label>
+                <br>
+                <input type="radio" id="go" name="pergunta1" value="go">
+                <label for="go">go</label>
+                <br>
+                <input type="radio" id="gone" name="pergunta1" value="gone">
+                <label for="gone">gone</label>
+            </fieldset>
+            <fieldset>
+                <legend>2</legend>
+                <p>Qual palavra é sinônimo de "feliz"?</p>
+                <input type="radio" id="sad" name="pergunta2" value="sad" required>
+                <label for="sad">sad</label>
+                <br>
+                <input type="radio" id="angry" name="pergunta2" value="angry">
+                <label for="angry">angry</label>
+                <br>
+                <input type="radio" id="joyful" name="pergunta2" value="joyful">
+                <label for="joyful">joyful</label>
+                <br>
+                <input type="radio" id="tired" name="pergunta2" value="tired">
+                <label for="tired">tired</label>
+            </fieldset>
+            <fieldset>
+                <legend>3</legend>
+                <p>Sinto muito - eu não ____ para te incomodar. Escolha a opção correta:</p>
+                <input type="radio" id="hope" name="pergunta3" value="hope" required>
+                <label for="hope">hope</label>
+                <br>
+                <input type="radio" id="think" name="pergunta3" value="think">
+                <label for="think">think</label>
+                <br>
+                <input type="radio" id="mean" name="pergunta3" value="mean">
+                <label for="mean">mean</label>
+                <br>
+                <input type="radio" id="suppose" name="pergunta3" value="suppose">
+                <label for="suppose">suppose</label>
+            </fieldset>
+            <fieldset>
+                <legend>4</legend>
+                <p>Qual é o plural de "mouse"?</p>
+                <input type="radio" id="mouses" name="pergunta4" value="mouses" required>
+                <label for="mouses">mouses</label>
+                <br>
+                <input type="radio" id="mouse" name="pergunta4" value="mouse">
+                <label for="mouse">mouse</label>
+                <br>
+                <input type="radio" id="mice" name="pergunta4" value="mice">
+                <label for="mice">mice</label>
+                <br>
+                <input type="radio" id="mices" name="pergunta4" value="mices">
+                <label for="mices">mices</label>
+            </fieldset>
+            <fieldset>
+                <legend>5</legend>
+                <p>Qual frase está no presente contínuo?</p>
+                <input type="radio" id="present1" name="pergunta5" value="present1" required>
+                <label for="present1">I eat dinner.</label>
+                <br>
+                <input type="radio" id="present2" name="pergunta5" value="present2">
+                <label for="present2">I am eating dinner.</label>
+                <br>
+                <input type="radio" id="present3" name="pergunta5" value="present3">
+                <label for="present3">I will eat dinner.</label>
+                <br>
+                <input type="radio" id="present4" name="pergunta5" value="present4">
+                <label for="present4">I ate dinner.</label>
+            </fieldset>
+            <fieldset>
+                <legend>6</legend>
+                <p>Complete a frase: "Ela tem ____ muitos livros."</p>
+                <input type="radio" id="too" name="pergunta6" value="too" required>
+                <label for="too">too</label>
+                <br>
+                <input type="radio" id="to" name="pergunta6" value="to">
+                <label for="to">to</label>
+                <br>
+                <input type="radio" id="two" name="pergunta6" value="two">
+                <label for="two">two</label>
+                <br>
+                <input type="radio" id="toomuch" name="pergunta6" value="toomuch">
+                <label for="toomuch">too much</label>
+            </fieldset>
+            <fieldset>
+                <legend>7</legend>
+                <p>Qual é a forma correta da pergunta?</p>
+                <input type="radio" id="q1" name="pergunta7" value="q1" required>
+                <label for="q1">Where you are going?</label>
+                <br>
+                <input type="radio" id="q2" name="pergunta7" value="q2">
+                <label for="q2">Where are you going?</label>
+                <br>
+                <input type="radio" id="q3" name="pergunta7" value="q3">
+                <label for="q3">Where going you are?</label>
+                <br>
+                <input type="radio" id="q4" name="pergunta7" value="q4">
+                <label for="q4">Where going are you?</label>
+            </fieldset>
+            <fieldset>
+                <legend>8</legend>
+                <p>Qual é a forma comparativa de "good"?</p>
+                <input type="radio" id="gooder" name="pergunta8" value="gooder" required>
+                <label for="gooder">gooder</label>
+                <br>
+                <input type="radio" id="better" name="pergunta8" value="better">
+                <label for="better">better</label>
+                <br>
+                <input type="radio" id="moregood" name="pergunta8" value="moregood">
+                <label for="moregood">more good</label>
+                <br>
+                <input type="radio" id="goodest" name="pergunta8" value="goodest">
+                <label for="goodest">goodest</label>
+            </fieldset>
+            <fieldset>
+                <legend>9</legend>
+                <p>Qual palavra é uma preposição?</p>
+                <input type="radio" id="run" name="pergunta9" value="run" required>
+                <label for="run">run</label>
+                <br>
+                <input type="radio" id="in" name="pergunta9" value="in">
+                <label for="in">in</label>
+                <br>
+                <input type="radio" id="jump" name="pergunta9" value="jump">
+                <label for="jump">jump</label>
+                <br>
+                <input type="radio" id="dog" name="pergunta9" value="dog">
+                <label for="dog">dog</label>
+            </fieldset>
+            <fieldset>
+                <legend>10</legend>
+                <p>Escolha a forma correta do verbo: "I ____ a book."</p>
+                <input type="radio" id="readed" name="pergunta10" value="readed" required>
+                <label for="readed">readed</label>
+                <br>
+                <input type="radio" id="read" name="pergunta10" value="read">
+                <label for="read">read</label>
+                <br>
+                <input type="radio" id="reads" name="pergunta10" value="reads">
+                <label for="reads">reads</label>
+                <br>
+                <input type="radio" id="reading" name="pergunta10" value="reading">
+                <label for="reading">reading</label>
+            </fieldset>
+
+            <!-- Botão para calcular a pontuação -->
+            <div class="alinhabotao">
+                <button id="botaofinal" type="submit">Resultado</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

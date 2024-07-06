@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILO CRIADO PARA HEADER E ALINHAMENTO DA LOGO */
+header {
+    background-color: rgb(24, 118, 250);
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li {
+    display: inline;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* ESTILO CRIADO PARA ALINHAMENTO DA PRIMEIRA MENSAGEM DO BOT */
+.caixadetexto1 {
+    display: flex;
+    align-items: center;
+    margin: 10px 30px 5px 30px;
+}
+
+/* ESTILO DA IMAGEM DO BOT */
+
+.caixadetexto1 img {
+    margin: 40px 10px 25px 5px;
+    opacity: 0;
+    animation: aparecerTexto 2s forwards;
+}
+
+/* ESTILO CRIADO PARA ALINHAMENTO DO CONTAINER  ONDE ESTAO A IMAGEM DO BOT E PRIMEIRA MENSAGEM */
+
+
+/* ESTILO CRIADO PARA PRIMEIRA MENSAGEM DO BOT */
+.botmensagem1 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    /* Opacity aplicado para iniciar a mensagem em transparente */
+    animation: aparecerTexto 2s forwards;
+    /*KEYFRAME ONDE O NOME APARECE DE BAIXO PARA CIMA */
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #cfced153;
+    border-radius: 40px 10px;
+    color: #040404;
+    border: solid rgb(239, 230, 230);
+    text-align: center;
+
+}
+
+/* ESTILO CRIADO PARA ALINHAMENTO DA AREA DE ENVIO ONDE TEM A CAIXA DE TEXTO E O BOTAO DE ENVIAR */
+
+.areadeenvio {
+    display: block;
+    text-align: start;
+
+}
+
+/* ESTILO CRIADO PARA A CAIXA DE TEXTO, ONDE O CLIENTE DIGITA O NOME */
+#nome {
+    margin: 10px 10px 5px 30px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(245, 245, 245);
+    border: solid rgb(234, 230, 230);
+    border-radius: 10px;
+    padding: 8px 25px 8px 25px;
+    color: #1876fa;
+}
+
+/* ESTILO APLICADO PARA O BOTAO ENVIAR NOME */
+#enviarnome {
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+    background-color: #413e40b9;
+    color: white;
+    animation: expandir 1.5s infinite alternate;
+    /* Animaçao de expansao ao botao enviar nome*/
+}
+
+/* ANIMAÇÃO DE EXPANSAO DE ENVIAR NOME */
+@keyframes expandir {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes expandir {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ESTILO APLICADO AO EVENTO DE ERROR EM JS EM CASO DE NAO DIGITACAO DE UM NOME */
+#nomenulo {
+    padding: 7px 10px 0px 30px;
+    color: red;
+}
+
+/* ESTILO APLICADO PARA ALINHAMENTO DA DIV ONDE DENTRO POSSUI UM  P COM O NOME DO CLIENTE COM SE ELE ESTIVESSE DIGITADO E ENVIADO QUE POR SUA VEZ APAREÇERA ESTILIZADO EM JS */
+.nomedocliente {
+    display: flex;
+    justify-content: flex-end;
+    margin: 60px 30px 20px 50px;
+    opacity: 0;
+    animation: aparecerTexto 15s forwards;
+}
+
+/*ESTILO CRIADO PARA ALINHAMENTO DA MENSAGEM2 DO BOT*/
+.botmensagem2 {
+    display: flex;
+    align-items: center;
+    margin: 10px 30px 5px 40px;
+    animation: aparecerTexto 14s forwards;
+    /*animacao criada para aparecer a segunda mensagem do bot apos 16s*/
+}
+
+#resposta {
+
+
+    animation: aparecerTexto 15s forwards;
+    /*KEYFRAME ONDE O NOME APARECE DE BAIXO PARA CIMA */
+
+}
+
+/*ALINHAMENTO ESTRITO DA MENSAGEM2 DO BOT ONDE RECEBE A AUTOMACAO E ESTILIZACAO EM JS*/
+
+
+/*ANIMAÇOES EM KEYFRAME DE APARECIMENTO DE TEXTO NAS MENSAGEMS E PULSAR NO BOTAO DE ENVIAR*/
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsar {
+    0% {
+        background-color: rgb(255, 255, 255);
+        transform: scale(1);
+    }
+
+    50% {
+        background-color: rgb(255, 255, 255);
+        transform: scale(1.2);
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+        transform: scale(1);
+    }
+}
+
+/*ESTILOS APLICADOS AOS LINKS/BOTOES DE ENVIAR OU CANCELAR O TESTE, SAO ESTILIZADOS EM JS*/
+#iniciarquiz,
+#cancelarquiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+    transition: all 0.2s ease;
+}
+
+/*ANIMACAO DE EXPANSAO DOS BOTOES QUANDO O MOUSE ESTIVER EM CIMA DOS LINK/BOTOES*/
+#iniciarquiz:hover,
+#cancelarquiz:hover {
+    animation: pulsar 2s infinite;
+}
+
+#iniciarquiz {
+    margin-top: 50px;
+
+    text-align: center;
+}
+
+#perguntasquiz {
+
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#perguntasquiz h1 {
+    text-align: center;
+    color: rgb(94, 101, 106);
+}
+
+#perguntasquiz legend {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #1876fa;
+    background-color: #bcbdbd42;
+    padding: 5px;
+    border-radius: 6px;
+
+
+}
+
+fieldset {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+
+}
+
+#perguntasquiz p {
+    margin: 10px;
+    font-weight: bold;
+    color: #030303;
+    font-size: 17px;
+}
+
+#perguntasquiz input[type="radio"] {
+    margin-left: 10px;
+
+}
+
+#perguntasquiz label {
+    color: #000000;
+}
+
+.alinhabotao {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.alinhabotao #botaofinal {
+    border: none;
+    font-size: 18px;
+    padding: 10px 50px;
+    border-radius: 7px;
+    background-color: #1876fa;
+    color: aliceblue;
+    animation: expandir 1.5s infinite alternate;
+}

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILO CRIADO PARA HEADER E ALINHAMENTO DA LOGO */
+header {
+    background-color: #1876fa;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li {
+    display: inline;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* ESTILO CRIADO PARA ALINHAMENTO DA PRIMEIRA MENSAGEM DO BOT */
+.caixadetexto3 {
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 10px 30px 5px 30px;
+}
+
+/* ESTILO DA IMAGEM DO BOT */
+
+.caixadetexto3 img {
+
+    margin: 40px 10px 25px 5px;
+    opacity: 0;
+    animation: aparecerTexto3 2s forwards;
+}
+
+/* ESTILO CRIADO PARA ALINHAMENTO DO CONTAINER  ONDE ESTAO A IMAGEM DO BOT E PRIMEIRA MENSAGEM */
+
+
+/* ESTILO CRIADO PARA PRIMEIRA MENSAGEM DO BOT */
+.botmensagem3 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    /* Opacity aplicado para iniciar a mensagem em transparente */
+    animation: aparecerTexto3 3s forwards;
+    /*KEYFRAME ONDE O NOME APARECE DE BAIXO PARA CIMA */
+    padding: 14px;
+    background-color: #cfced153;
+    border-radius: 40px 10px;
+    color: #040404;
+    border: solid rgb(239, 230, 230);
+    text-align: center;
+
+}
+
+.caixadetexto4 {
+    display: block;
+    align-items: center;
+    opacity: 0;
+    /* Opacity aplicado para iniciar a mensagem em transparente */
+    animation: aparecerTexto3 10s forwards;
+}
+
+.seuresultado {
+    display: flex;
+    align-items: center;
+}
+
+.caixadetexto5 {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+@keyframes aparecerTexto3 {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ESTILO CRIADO PARA ALINHAMENTO DA AREA DE ENVIO ONDE TEM A CAIXA DE TEXTO E O BOTAO DE ENVIAR */
+
+
+#hellow {
+    background-color: #1876fa;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}

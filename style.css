@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    width: 170px;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #14dcff;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+.button:hover {
+    background-color: #0BC7E8;
+    transform: scale(1.1);
+}
+
+.ContainerHeader {
+    background: url(imagens/backgroundboston.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Faz com que o background não role com a página */
+    width: 100vw;
+    height: 800px;
+    position: relative;
+}
+
+/* Header fixed */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    /* Ajustado para ser responsivo */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Leve transparência */
+    box-shadow: 0px 6px 8px -2px rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(10px);
+    /* Desfoque do fundo */
+    z-index: 1000;
+}
+
+header img {
+    width: 110px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Ajustado para espaço entre itens */
+}
+
+nav a {
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+}
+
+nav img {
+    width: 24px;
+    /* Ajustado o tamanho do ícone do menu */
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+.ContainerLeft {
+    margin-left: 5%;
+    max-width: 30%;
+    padding: 120px 40px 20px 40px;
+    background-color: #2D353D;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+}
+
+.ContainerLeft h1 {
+    margin: 60px 0 15px 0;
+    font-size: 3rem;
+    /* Fontes responsivas */
+}
+
+.ContainerLeft p {
+    margin-bottom: 70px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 20px;
+}
+
+.text h5 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.levels {
+    background-color: #F2F5F8;
+    padding: 80px 20px;
+}
+
+.levels h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Container-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsivo para diferentes tamanhos */
+    gap: 40px;
+}
+
+.Container-levels .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.Container-levels .item h3 {
+    font-size: 1.5rem;
+}
+
+.Container-levels .item p {
+    font-size: 0.875rem;
+    color: #22282D;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.start h2 {
+    font-size: 2.5rem;
+}
+
+footer {
+    background-color: #334048;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+}
+
+/* Media Queries para tornar o site responsivo */
+
+/* Telas pequenas (smartphones em retrato) */
+@media (max-width: 600px) {
+    .button {
+        width: 140px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .ContainerHeader {
+        height: 500px;
+        /* Ajustado a altura para telas menores */
+        background-attachment: scroll;
+        /* Faz com que o background role com a página */
+    }
+
+    header {
+        padding: 18px 10px;
+        /* Ajuste do padding para pequenas telas */
+    }
+
+    .ContainerLeft {
+        margin: 0;
+        max-width: 100%;
+        padding: 60px 10px;
+        height: auto;
+    }
+
+    .text {
+        padding: 20px 10px;
+    }
+
+    .text h5 {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .levels {
+        padding: 40px 10px;
+    }
+
+    .levels h2 {
+        font-size: 1.5rem;
+    }
+
+    .Container-levels {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .Container-levels .item h3 {
+        font-size: 1.2rem;
+    }
+
+    .Container-levels .item p {
+        font-size: 0.75rem;
+    }
+
+    .start {
+        padding: 20px 10px;
+    }
+
+    .start h2 {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+/* Telas médias (tablets e dispositivos pequenos) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .button {
+        width: 150px;
+        height: 55px;
+        font-size: 13px;
+    }
+
+    .text h5 {
+        font-size: 1.1rem;
+    }
+
+    .levels h2 {
+        font-size: 2rem;
+    }
+
+    .Container-levels {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .Container-levels .item h3 {
+        font-size: 1.3rem;
+    }
+
+    .Container-levels .item p {
+        font-size: 0.85rem;
+    }
+
+    .start h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Telas grandes (desktops e dispositivos grandes) */
+@media (min-width: 1025px) {
+    .button {
+        width: 180px;
+        height: 65px;
+        font-size: 15px;
+    }
+
+    .ContainerHeader {
+        height: 800px;
+        /* Altura padrão para telas grandes */
+    }
+
+    .text h5 {
+        font-size: 1.2rem;
+    }
+
+    .levels h2 {
+        font-size: 2.5rem;
+    }
+
+    .Container-levels {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .Container-levels .item h3 {
+        font-size: 1.5rem;
+    }
+
+    .Container-levels .item p {
+        font-size: 0.875rem;
+    }
+
+    .start h2 {
+        font-size: 2.5rem;
+    }
+}

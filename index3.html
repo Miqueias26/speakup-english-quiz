@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/usa.png" type="image/x-icon">
+    <link rel="stylesheet" href="style3.css">
+    <title>Resultado</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>ChatBot <img src="imagens/icononline.png" alt="Icone online" width="12px"></li>
+                <li><a href="index.html" class="close">&times;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="caixadetexto3">
+        <img src="imagens/imagem2.png" alt="Imagem do Chat" width="100px">
+        <div class="container3">
+            <p id="botmensagem3"></p>
+        </div>
+    </div>
+    <div class="caixadetexto5">
+        <p id="aplicarfotonivel"></p>
+    </div>
+    <div id="caixadetexto4">
+        <p id="seuresultado"></p>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function exibirResultado() {
+                const aplicarfotonivel = document.getElementById('aplicarfotonivel');
+                let seunivelemfoto = document.createElement('img');
+                aplicarfotonivel.appendChild(seunivelemfoto);
+                seunivelemfoto.style.borderRadius = '10px';
+
+                const score = parseFloat(localStorage.getItem('score1')) || 0;
+                const nome = localStorage.getItem('nome');
+                let nivel;
+
+                if (score <= 1) {
+                    seunivelemfoto.setAttribute('src', 'imagens/a1.png');
+                    nivel = 'Seu nível de inglês é A1: Você é capaz de compreender e usar expressões familiares do dia a dia e frases muito básicas. Você pode se apresentar e responder perguntas simples sobre detalhes pessoais, como onde mora e pessoas que conhece. A comunicação é possível se o interlocutor falar devagar e claramente.';
+                } else if (score > 1 && score <= 3) {
+                    seunivelemfoto.setAttribute('src', 'imagens/a2.png');
+                    nivel = 'Seu nível de inglês é A2: Você consegue entender frases isoladas e expressões frequentemente usadas em áreas de relevância imediata (informações pessoais e familiares simples, compras, geografia local, emprego). Você pode comunicar em tarefas simples e rotinas que exigem uma troca direta de informações sobre assuntos familiares e rotineiros.';
+                } else if (score > 3 && score <= 5) {
+                    seunivelemfoto.setAttribute('src', 'imagens/b1.png');
+                    nivel = 'Seu nível de inglês é B1: Isso indica que você pode compreender os pontos principais de textos claros e em linguagem padrão sobre assuntos familiares que ocorrem regularmente no trabalho, escola, lazer, etc. Pode lidar com a maioria das situações que podem surgir enquanto viaja em uma área onde o idioma é falado. Você é capaz de produzir textos simples e coerentes sobre tópicos que lhe são familiares ou de interesse pessoal.';
+                } else if (score > 5 && score <= 7) {
+                    seunivelemfoto.setAttribute('src', 'imagens/b2.png');
+                    nivel = 'Seu nível de inglês é B2: Isso indica que você consegue entender as ideias principais de textos complexos sobre tópicos concretos e abstratos, incluindo discussões técnicas na sua área de especialização. Você pode interagir com falantes nativos com um grau significativo de fluência e espontaneidade que torna a comunicação regular com falantes nativos bastante possível sem tensão para qualquer parte.';
+                } else if (score > 7 && score <= 8) {
+                    seunivelemfoto.setAttribute('src', 'imagens/c1.png');
+                    nivel = 'Seu nível de inglês é C1: Isso indica que você é capaz de compreender uma vasta gama de textos longos e exigentes, reconhecendo significados implícitos. Pode expressar-se de forma fluente e espontânea sem precisar procurar expressões. Você pode usar a língua de forma flexível e eficaz para fins sociais, acadêmicos e profissionais. Pode produzir textos claros, bem-estruturados e detalhados sobre temas complexos, mostrando um uso controlado de padrões organizacionais, conectores e dispositivos coesivos.';
+                } else if (score > 8 && score <= 10) {
+                    seunivelemfoto.setAttribute('src', 'imagens/c2.png');
+                    nivel = 'Seu nível de inglês é C2: Isso indica que você consegue compreender com facilidade praticamente tudo o que lê ou ouve. Você pode resumir informações de diversas fontes faladas e escritas, reconstruindo argumentos e relatos em uma apresentação coerente. Você pode se expressar espontaneamente, de forma muito fluente e precisa, diferenciando nuances sutis de significado, mesmo em situações mais complexas.'
+                } else {
+                    nivel = 'Pontuação fora do intervalo esperado.';
+                }
+
+                const seuresultado = document.getElementById('seuresultado');
+                const botmensagem3 = document.getElementById('botmensagem3');
+
+                botmensagem3.style.borderRadius = '40px 10px';
+                botmensagem3.style.padding = '14px';
+                botmensagem3.style.textAlign = 'center';
+                botmensagem3.style.fontSize = '14px';
+                botmensagem3.style.color = '#040404';
+                botmensagem3.style.backgroundColor = '#cfced153';
+
+                seuresultado.style.borderRadius = '40px 10px';
+                seuresultado.style.padding = '14px';
+                seuresultado.style.textAlign = 'center';
+                seuresultado.style.fontSize = '14px';
+                seuresultado.style.color = '#040404';
+                seuresultado.style.margin = '20px';
+                seuresultado.style.backgroundColor = '#cfced153';
+
+                botmensagem3.innerText = `Obrigado por participar, ${nome}. Segue sua pontuação abaixo:`;
+
+                seuresultado.innerText = `Sua Pontuação foi ${score}. Portanto, ${nivel}.`;
+
+                // Limpar o localStorage após exibir os resultados
+                localStorage.removeItem('nome');
+                localStorage.removeItem('score');
+                localStorage.removeItem('nivel');
+            }
+
+            exibirResultado();
+        });
+    </script>
+</body>
+
+</html>
