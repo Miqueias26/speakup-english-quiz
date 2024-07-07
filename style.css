@@ -7,6 +7,9 @@
     font-family: "Poppins", sans-serif;
 }
 
+
+
+#button,
 .button {
     padding: 15px 25px;
     border: none;
@@ -25,6 +28,11 @@
     transform: scale(1.1);
 }
 
+#button:hover {
+    background-color: #0BC7E8;
+    transform: scale(1.1);
+}
+
 .ContainerHeader {
     background: url(imagens/backgroundboston.jpg) no-repeat center center;
     background-size: cover;
@@ -34,6 +42,7 @@
     height: 800px;
     position: relative;
 }
+
 
 /* Header fixed */
 header {
@@ -46,7 +55,7 @@ header {
     align-items: center;
     padding: 18px 5%;
     /* Ajustado para ser responsivo */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
     /* Leve transparência */
     box-shadow: 0px 6px 8px -2px rgba(0, 0, 0, 0.48);
     backdrop-filter: blur(10px);
@@ -75,11 +84,15 @@ nav img {
     /* Ajustado o tamanho do ícone do menu */
     cursor: pointer;
     transition: 0.2s all ease-in-out;
+
+
 }
 
 nav img:hover {
     transform: scale(1.1);
 }
+
+
 
 .ContainerLeft {
     margin-left: 5%;
@@ -89,6 +102,7 @@ nav img:hover {
     color: #fff;
     position: absolute;
     top: 20%;
+
 }
 
 .ContainerLeft h1 {
@@ -184,6 +198,12 @@ footer {
         font-size: 12px;
     }
 
+    #button {
+        width: 140px;
+        height: 50px;
+        font-size: 12px;
+    }
+
     .ContainerHeader {
         height: 500px;
         /* Ajustado a altura para telas menores */
@@ -254,6 +274,12 @@ footer {
         font-size: 13px;
     }
 
+    #button {
+        width: 150px;
+        height: 55px;
+        font-size: 13px;
+    }
+
     .text h5 {
         font-size: 1.1rem;
     }
@@ -283,6 +309,12 @@ footer {
 /* Telas grandes (desktops e dispositivos grandes) */
 @media (min-width: 1025px) {
     .button {
+        width: 180px;
+        height: 65px;
+        font-size: 15px;
+    }
+
+    #button {
         width: 180px;
         height: 65px;
         font-size: 15px;

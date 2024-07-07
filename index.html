@@ -10,13 +10,17 @@
 
 <body>
     <div class="ContainerHeader">
-        <header>
+
+        <header id="header">
             <img src="imagens/logo.png" alt="Logo Speakup English" />
             <nav>
                 <a href="index2.html" rel="noopener noreferrer">
                     <button class="button">Iniciar</button>
                 </a>
-                <img src="imagens/icon.png" alt="Menu Icon" />
+                <a id="nightmode" onclick="nightmodeon()" ondblclick="nightmodeoff()">
+                    <img id="iconnightmode" src="imagens/dark-mode.png" alt="Menu Icon" />
+
+                </a>
             </nav>
         </header>
         <div class="ContainerLeft">
@@ -62,15 +66,15 @@
         </div>
     </section>
     <section class="start">
-        <h2>Iniciar o teste AGORA!</h2>
+        <h2 id="agora">Iniciar o teste AGORA!</h2>
         <a href="index2.html" rel="noopener noreferrer">
-            <button class="button">Iniciar</button>
+            <button id="button">Iniciar</button>
         </a>
     </section>
     <footer>
         <p>&copy; 2024 Speakup English. Todos os direitos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 
 </html>

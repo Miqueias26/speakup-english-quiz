@@ -148,4 +148,15 @@ function calcularPontuacao() {
 
   // Redirecionar para a página de resultados
   window.location.href = 'index3.html';
+
+
+
+  // A PARTIR DAQUI TODAS AS ALTERAÇOES QUE FOREM FEITAS SERAO PARA UPDAPTE DO PROJETO //
+
+
+
+
+
 }
+
+
